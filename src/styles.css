@@ -1,9 +1,25 @@
+@font-face {
+    font-family: Slabo13px;
+    src: url('/assets/Slabo13px-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('/assets/Montserrat-VariableFont_wght.ttf');
+    font-display: swap;
+}
 
 body {
     --jet-black: #16161B;
     --ghostly-white: #F8F8FF;
     font-family: Montserrat, sans-serif;
     background-color: var(--ghostly-white);
+}
+
+main, header {
+    max-width: 43.75rem;
+    margin: auto;
 }
 
 h1 {
@@ -16,20 +32,30 @@ h1 {
 
 h2 {
     font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    letter-spacing: -.1rem;
+    color: var(--jet-black);
+}
+
+
+h3 {
+    font-family: Montserrat, sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
     letter-spacing: -.05rem;
     color: var(--jet-black);
 }
 
-@font-face {
-    font-family: Slabo13px;
-    src: url('/assets/Slabo13px-Regular.ttf');
-    font-display: swap;
+header h1 {
+    opacity: 0.05;
+    transition: all 0.3s cubic-bezier(0.36, 0, 0.074, 0.879);
+    transform-origin: 0 50%;
+    transform: scaleX(0.95);
+    user-select: none;
 }
 
-@font-face {
-    font-family: Montserrat;
-    src: url('/assets/Montserrat-VariableFont_wght.ttf');
-    font-display: swap;
+header:hover h1 {
+    opacity: 1;
+    transform: scaleX(1);
 }

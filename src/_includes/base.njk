@@ -2,16 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF8" />
+    <meta name="description" content="Arthur Chardon portfolio" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/css/{{cssFile}}" />
   </head>
   <body>
     <header>
       <h1>{{ title }}</h1>
-      </header>
-      <main>
-        {{ content | safe }}
-      </main>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
   </body>
 </html>
