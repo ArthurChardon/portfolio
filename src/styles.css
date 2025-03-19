@@ -1,0 +1,35 @@
+
+body {
+    --jet-black: #16161B;
+    --ghostly-white: #F8F8FF;
+    font-family: Montserrat, sans-serif;
+    background-color: var(--ghostly-white);
+}
+
+h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: -.05rem;
+    color: var(--jet-black);
+}
+
+h2 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -.05rem;
+    color: var(--jet-black);
+}
+
+@font-face {
+    font-family: Slabo13px;
+    src: url('/assets/Slabo13px-Regular.ttf');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url('/assets/Montserrat-VariableFont_wght.ttf');
+    font-display: swap;
+}
