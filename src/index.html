@@ -4,9 +4,45 @@ layout: "base.njk"
 cssFile: "home.css"
 ---
 
-<h2>Arthur Chardon</h2>
-<h3>Computer science engineer, web developer & tech savyy</h3>
-<section>
+<div class="gigantic-title--container">
+  <h1 class="gigantic-title--title">
+    <span class="gigantic-title--title--first-name">
+      Arthur
+    </span>
+    <span class="gigantic-title--title--last-name">
+      Chardon
+    </span>
+  </h1>
+</div>
+<div class="subtitle-container">
+  <div class="sheet-container gitgantic-subtitle--sheet-container">
+    <div class="sheet front-sheet">
+      <h2 class="gitgantic-subtitle--title">Computer science engineer,<br>web developer & tech savyy</h2>
+    </div>
+    <div class="sheet back-sheet">
+      <h2 class="gitgantic-subtitle--title">Based in Paris, France<br>From Annecy and Grenoble</h2>
+    </div>
+  </div>
+</div>
+
+<section class="description--container">
+  <div class="description--box">
+    <p class="description--text" style="--n:261">
+      I am a <b>computer science engineer</b>, mostly working on web projects. I enjoy creating <b>user friendly</b>
+      interfaces that relies on <b>simple</b> yet <b>solid basis</b>.
+    </p>
+  </div>
+  <div>
+    <ul class="stack--list">
+      <li><img src="assets/svg/angular-17.svg"></li>
+      <li><img src="assets/svg/react.svg"></li>
+      <li><img src="assets/svg/nodejs.svg"></li>
+  </div>
+</section>
+
+<section style="display: none">
+  TODO: tech skills: - programming languages - frameworks - tools - db other
+  sites certifs (leetcode...)
   <h4>What I seek in a project ?</h4>
   <ul>
     <li>
@@ -18,6 +54,35 @@ cssFile: "home.css"
 </section>
 
 <section style="display: none">
-  TODO: tech skills: - programming languages - frameworks - tools - db other
-  sites certifs (leetcode...)
+  <h3>Technical stacks</h3>
+  <ul>
+    <li>Angular</li>
+    <li>React</li>
+    <li>Node.js</li>
+    <li>Python</li>
+  </ul>
+</section>
+
+<section style="display: none">
+  <h3>Projects</h3>
+  <ul>
+    <li>
+      <div>Frontend: Angular, Typescript</div>
+      <div>Backend: Spring Boot, Java</div>
+      <div>Database: PostgreSQL, DynamoDB</div>
+      <div>Host: AWS</div>
+    </li>
+    <li>
+      <div>Frontend: Angular, Typescript</div>
+      <div>Backend: NestJS, Typescript</div>
+      <div>Database: PostgreSQL</div>
+      <div>Host: AWS</div>
+    </li>
+    <li>
+      <div>Frontend: Angular, Typescript</div>
+      <div>Backend: Serverless NodeJS, AWS Lambda</div>
+      <div>Database: DynamoDB</div>
+      <div>Host: AWS</div>
+    </li>
+  </ul>
 </section>

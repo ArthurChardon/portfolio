@@ -10,15 +10,109 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url('/assets/GloriaHallelujah-Regular.ttf');
+    font-display: swap;
+}
+
+/* RESET CSS */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
 body {
     --jet-black: #16161B;
     --ghostly-white: #F8F8FF;
     font-family: Montserrat, sans-serif;
     background-color: var(--ghostly-white);
+    height: 100vh;
 }
 
-main, header {
+header {
+    padding: 1rem 0;
+}
+
+main,
+header {
     max-width: 43.75rem;
+
+    @media(min-width: 95rem) {
+        max-width: 56.25rem;
+    }
+
+    @media(min-width: 118.75rem) {
+        max-width: 70rem;
+    }
+
     margin: auto;
 }
 
@@ -47,15 +141,19 @@ h3 {
     color: var(--jet-black);
 }
 
-header h1 {
+header a {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: -.05rem;
+    color: var(--jet-black);
     opacity: 0.05;
     transition: all 0.3s cubic-bezier(0.36, 0, 0.074, 0.879);
     transform-origin: 0 50%;
     transform: scaleX(0.95);
-    user-select: none;
 }
 
-header:hover h1 {
+header:hover a {
     opacity: 1;
     transform: scaleX(1);
 }

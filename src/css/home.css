@@ -1,0 +1,237 @@
+html {
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+h2 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 100%;
+    margin: 0.25rem 0;
+}
+
+p {
+    text-wrap: balance;
+}
+
+li {
+    list-style: none;
+}
+
+.gigantic-title--container {
+    margin-top: 1.5rem;
+}
+
+.gigantic-title--title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 12rem;
+    letter-spacing: -.05rem;
+    line-height: 115%;
+    transition: all .5s;
+}
+
+.gigantic-title--title:hover {
+    letter-spacing: -.3rem;
+}
+
+.gigantic-title--title--first-name {
+    display: block;
+    width: fit-content;
+    animation: slideOuterRight 1s;
+}
+
+.gigantic-title--title--last-name {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    animation: slideOuterLeft 1s .25s backwards;
+}
+
+.gitgantic-subtitle--sheet-container {
+    margin-left: auto;
+    margin-right: auto;
+    animation: slideOuterUp 1s .5s backwards;
+}
+
+.gitgantic-subtitle--title {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    color: grey;
+}
+
+.subtitle-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: .5rem;
+    overflow: hidden;
+}
+
+.sheet-container {
+    position: relative;
+    width: 40rem;
+    height: 6rem;
+}
+
+.sheet {
+    position: absolute;
+    min-width: 100%;
+    width: fit-content;
+    padding: .5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    transition: all .5s;
+    transform-origin: 50% 0;
+}
+
+.description--container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 1rem;
+}
+
+.description--box {
+    margin: auto;
+    padding: 1rem;
+    max-width: 30rem;
+    border-radius: 4px;
+    background-color: darkgrey;
+    animation: slideOuterRight 1s 1.25s backwards;
+}
+
+.description--text {
+    font-family: monospace;
+    font-size: 1.5rem;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0000;
+    background:
+        linear-gradient(-90deg, var(--jet-black) 5px, #0000 0) 10px 0,
+        linear-gradient(var(--jet-black) 0 0, #212A37) 0 0;
+    background-size: calc(var(--n)*1ch) 200%;
+    -webkit-background-clip: padding-box, text;
+    background-clip: padding-box, text;
+    background-repeat: no-repeat;
+    animation:
+        typer-caret .5s infinite steps(1),
+        typer calc(var(--n)*.03s) 1.5s steps(var(--n)) backwards;
+}
+
+.front-sheet {
+    transform: perspective(800px) rotate(0);
+}
+
+.sheet-container:hover .front-sheet {
+    transform: perspective(800px) rotateX(-90deg);
+}
+
+.back-sheet {
+    transform: perspective(800px) rotateX(90deg);
+}
+
+.sheet-container:hover .back-sheet {
+    transform: perspective(800px) rotate(0);
+}
+
+.stack--list {
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.stack--list li {
+    width: fit-content;
+}
+
+.stack--list li img {
+    width: 5rem;
+    height: 5rem;
+    animation: vanishIn 1s 3s backwards;
+    transition: all .5s;
+}
+
+.stack--list li img:hover {
+    transform: rotateY(360deg)
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOuterLeft {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOuterRight {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOuterUp {
+    from {
+        transform: translateY(100vh);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes vanishIn {
+    from {
+        opacity: 0;
+        filter: blur(90px);
+        transform: scale(2);
+        transform-origin: 50px 50px;
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+        transform-origin: 50px 50px;
+    }
+}
+
+@keyframes typer {
+    from {
+        background-size: 0 200%
+    }
+}
+
+@keyframes typer-caret {
+    50% {
+        background-position: 0 -100%, 0 0
+    }
+}
