@@ -56,18 +56,22 @@ li {
     animation: slideOuterLeft 1s .25s backwards;
 }
 
-.gitgantic-subtitle--sheet-container {
+.gigantic-subtitle--sheet-container {
     margin-left: auto;
     margin-right: auto;
     animation: slideOuterUp 1s .5s backwards;
 }
 
-.gitgantic-subtitle--title {
+.gigantic-subtitle--title {
     display: block;
     width: fit-content;
     margin: auto;
     text-align: center;
     color: grey;
+}
+
+.gigantic-subtitle--title span {
+    color: darkslategrey;
 }
 
 .subtitle-container {
@@ -151,22 +155,56 @@ li {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap;
+
+    &.languages-stack {
+        margin-top: 1rem;
+    }
+
+    &.tools-stack {
+        margin-top: 1rem;
+    }
 }
 
 .stack--list li {
     width: fit-content;
 }
 
+.stack--list.main-stack li img {
+    width: 5rem;
+    height: 5rem;
+}
+
+.stack--list.languages-stack li img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.stack--list.tools-stack li img {
+    width: 3rem;
+    height: 3rem;
+}
+
 .stack--list li img {
     width: 5rem;
     height: 5rem;
-    animation: vanishIn 1s 3s backwards;
+    filter: grayscale();
     transition: all .5s;
 }
 
 .stack--list li img:hover {
-    transform: rotateY(360deg)
+    filter: none;
+    transform: scale(1.1);
 }
+
+.stack--list li:nth-child(even) img {
+    animation: vanishInRight 1s 3s backwards, decolorize 1s 4s backwards;
+}
+
+.stack--list li:nth-child(odd) img {
+    animation: vanishInLeft 1s 3s backwards, decolorize 1s 4s backwards;
+}
+
 
 @keyframes slideLeft {
     from {
@@ -208,19 +246,45 @@ li {
     }
 }
 
-@keyframes vanishIn {
+@keyframes vanishInRight {
     from {
         opacity: 0;
         filter: blur(90px);
-        transform: scale(2);
-        transform-origin: 50px 50px;
+        transform: translateX(-100%) scale(2);
+        transform-origin: 50% 50%;
     }
 
     to {
         opacity: 1;
         filter: blur(0px);
         transform: scale(1);
-        transform-origin: 50px 50px;
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes vanishInLeft {
+    from {
+        opacity: 0;
+        filter: blur(90px);
+        transform: translateX(100%) scale(2);
+        transform-origin: 50% 50%;
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0px);
+        transform: scale(1);
+        transform-origin: 50% 50%;
+    }
+}
+
+@keyframes decolorize {
+    from {
+        filter: grayscale(0%);
+    }
+
+    to {
+        filter: grayscale(100%);
     }
 }
 

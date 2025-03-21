@@ -3,7 +3,4 @@ https://bradgarropy.com/now
 todo: 
 https://robmc.dev/blog/add-css-to-your-eleventy-site/
 
-icon grayscale and color when hovered:
-https://codepen.io/ephs23/pen/NeQZGx
-
 indication on every element that can be hovered
