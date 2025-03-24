@@ -44,6 +44,7 @@ li {
 
 .gigantic-title--title {
     font-size: 6rem;
+
     @media(min-width: 95rem) {
         font-size: 8rem;
     }
@@ -52,7 +53,8 @@ li {
         font-size: 12rem;
     }
 
-    font-family: Montserrat, sans-serif;
+    font-family: Montserrat,
+    sans-serif;
     font-weight: 900;
     letter-spacing: -.05rem;
     line-height: 115%;
@@ -119,14 +121,14 @@ li {
     transform-origin: 50% 0;
 }
 
-.description--container {
+.aboutme-stacks--container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     padding: 1rem;
 }
 
-.description-box {
+.code-box {
     margin: auto;
     max-width: 30rem;
     border-radius: 4px;
@@ -134,7 +136,7 @@ li {
     animation: slideOuterRight 1s 1.25s backwards;
 }
 
-.description-box--header {
+.code-box--header {
     display: flex;
     align-items: center;
     padding: .2rem .4rem;
@@ -144,7 +146,7 @@ li {
     border-radius: 4px;
 }
 
-.description-box--header h3 {
+.code-box--header h3 {
     font-size: 0.625rem;
     font-weight: 700;
     font-family: monospace;
@@ -153,7 +155,7 @@ li {
     line-height: 100%;
 }
 
-.description-box--icon {
+.code-box--icon {
     height: 1rem;
     width: 1rem;
     background-color: #00a1f1;
@@ -162,15 +164,18 @@ li {
     mask-size: 100%;
 }
 
-.description-box--body {
+.code-box--body {
     padding: .5rem 1rem;
     background-color: var(--vscode-content-bg);
     border-radius: 4px;
 }
 
-.description--text {
+.code--text {
     font-family: monospace;
     font-size: 1.5rem;
+}
+
+.code--text--typing {
     display: inline;
     margin-left: auto;
     margin-right: auto;
@@ -185,6 +190,19 @@ li {
     animation:
         typer-caret .5s infinite steps(1),
         typer calc(var(--n)*.03s) 1.5s steps(var(--n)) backwards;
+}
+
+.code--text--standard {
+    color: var(--vscode-content-text);
+}
+
+.code--text--standard b {
+    filter: brightness(120%);
+    animation: brighting 1s infinite alternate;
+}
+
+.code--text--standard li {
+    list-style: disc;
 }
 
 .front-sheet {
@@ -365,8 +383,19 @@ li {
         opacity: 0;
         transform: scale(1);
     }
+
     to {
         opacity: 1;
         transform: scale(2);
+    }
+}
+
+@keyframes brighting {
+    from {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(120%);
     }
 }
