@@ -31,9 +31,17 @@ li {
 }
 
 .gigantic-title--title {
+    font-size: 6rem;
+    @media(min-width: 95rem) {
+        font-size: 8rem;
+    }
+
+    @media(min-width: 118.75rem) {
+        font-size: 12rem;
+    }
+
     font-family: Montserrat, sans-serif;
     font-weight: 900;
-    font-size: 12rem;
     letter-spacing: -.05rem;
     line-height: 115%;
     transition: all .5s;
@@ -106,13 +114,46 @@ li {
     padding: 1rem;
 }
 
-.description--box {
+.description-box {
     margin: auto;
-    padding: 1rem;
     max-width: 30rem;
     border-radius: 4px;
-    background-color: darkgrey;
+    background-color: var(--vscode-content-bg);
     animation: slideOuterRight 1s 1.25s backwards;
+}
+
+.description-box--header {
+    display: flex;
+    align-items: center;
+    padding: .2rem .4rem;
+    gap: .4rem;
+    border-bottom: 1px solid var(--vscode-top-bar-border);
+    background-color: var(--vscode-top-bar-bg);
+    border-radius: 4px;
+}
+
+.description-box--header h3 {
+    font-size: 0.625rem;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--vscode-top-bar-text);
+    letter-spacing: normal;
+    line-height: 100%;
+}
+
+.description-box--icon {
+    height: 1rem;
+    width: 1rem;
+    background-color: #00a1f1;
+    mask: url("../assets/svg/infinite.svg") no-repeat center;
+    -webkit-mask: url("../assets/svg/infinite.svg") no-repeat center;
+    mask-size: 100%;
+}
+
+.description-box--body {
+    padding: .5rem 1rem;
+    background-color: var(--vscode-content-bg);
+    border-radius: 4px;
 }
 
 .description--text {
@@ -123,8 +164,8 @@ li {
     margin-right: auto;
     color: #0000;
     background:
-        linear-gradient(-90deg, var(--jet-black) 5px, #0000 0) 10px 0,
-        linear-gradient(var(--jet-black) 0 0, #212A37) 0 0;
+        linear-gradient(-90deg, var(--vscode-content-text) 5px, #0000 0) 10px 0,
+        linear-gradient(var(--vscode-content-text) 0 0) 0 0;
     background-size: calc(var(--n)*1ch) 200%;
     -webkit-background-clip: padding-box, text;
     background-clip: padding-box, text;

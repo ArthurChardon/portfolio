@@ -92,6 +92,12 @@ h6 {
 body {
     --jet-black: #16161B;
     --ghostly-white: #F8F8FF;
+    --vscode-top-bar-bg: #181818;
+    --vscode-top-bar-text: #AAAAAA;
+    --vscode-top-bar-border: #2B2B2B;
+    --vscode-content-bg: #1F1F1F;
+    --vscode-content-text: #9ccdc4;
+        
     font-family: Montserrat, sans-serif;
     background-color: var(--ghostly-white);
     height: 100vh;
