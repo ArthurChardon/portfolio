@@ -6,6 +6,18 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+.page-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    background: conic-gradient(from 0.05turn, var(--ghostly-white), var(--bluey-white), var(--ghostly-white));
+    animation: background-pulse 3s infinite alternate;
+}
+
 h2 {
     font-size: 2.5rem;
     line-height: 100%;
@@ -239,13 +251,20 @@ li {
 }
 
 .stack--list li:nth-child(even) img {
-    animation: vanishInRight 1s 3s backwards, decolorize 1s 4s backwards;
+    animation: vanishInRight 1s 2.5s backwards, decolorize 1s 4s backwards;
 }
 
 .stack--list li:nth-child(odd) img {
-    animation: vanishInLeft 1s 3s backwards, decolorize 1s 4s backwards;
+    animation: vanishInLeft 1s 2.5s backwards, decolorize 1s 4s backwards;
 }
 
+.stack--list.languages-stack li img {
+    animation-delay: 2.75s, 4s;
+}
+
+.stack--list.tools-stack li img {
+    animation-delay: 3s, 4s;
+}
 
 @keyframes slideLeft {
     from {
@@ -291,7 +310,7 @@ li {
     from {
         opacity: 0;
         filter: blur(90px);
-        transform: translateX(-100%) scale(2);
+        transform: rotate(20deg) scale(2);
         transform-origin: 50% 50%;
     }
 
@@ -307,7 +326,7 @@ li {
     from {
         opacity: 0;
         filter: blur(90px);
-        transform: translateX(100%) scale(2);
+        transform: rotate(-20deg) scale(2);
         transform-origin: 50% 50%;
     }
 
@@ -338,5 +357,16 @@ li {
 @keyframes typer-caret {
     50% {
         background-position: 0 -100%, 0 0
+    }
+}
+
+@keyframes background-pulse {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(2);
     }
 }

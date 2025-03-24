@@ -92,6 +92,7 @@ h6 {
 body {
     --jet-black: #16161B;
     --ghostly-white: #F8F8FF;
+    --bluey-white: #dae1f3;
     --vscode-top-bar-bg: #181818;
     --vscode-top-bar-text: #AAAAAA;
     --vscode-top-bar-border: #2B2B2B;
@@ -105,6 +106,8 @@ body {
 
 header {
     padding: 1rem 0;
+    display: flex;
+    gap: .5rem;
 }
 
 main,
@@ -148,18 +151,23 @@ h3 {
 }
 
 header a {
+    flex-grow: 1;
     font-family: Montserrat, sans-serif;
     font-weight: 900;
     font-size: 2rem;
     letter-spacing: -.05rem;
     color: var(--jet-black);
+    text-align: center;
     opacity: 0.05;
     transition: all 0.3s cubic-bezier(0.36, 0, 0.074, 0.879);
-    transform-origin: 0 50%;
-    transform: scaleX(0.95);
+    transform-origin: 50% 0;
+    transform: scale(1);
 }
 
-header:hover a {
+header:hover a, header:focus-within a {
     opacity: 1;
-    transform: scaleX(1);
+}
+
+header a:hover, header a:focus {
+    transform: scale(1.1);
 }
