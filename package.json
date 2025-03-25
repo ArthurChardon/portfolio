@@ -1,9 +1,11 @@
 {
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "prettier": "^3.5.3"
   }
 }
