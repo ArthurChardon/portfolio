@@ -109,9 +109,12 @@ header {
   gap: 0.5rem;
 }
 
-main,
-header {
+.centered-content {
   max-width: 43.75rem;
+
+  @media (min-width: 64rem) {
+    max-width: 64rem;
+  }
 
   @media (min-width: 95rem) {
     max-width: 56.25rem;
@@ -122,6 +125,7 @@ header {
   }
 
   margin: auto;
+  grid-column: 2;
 }
 
 h1 {
