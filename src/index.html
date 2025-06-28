@@ -1,12 +1,12 @@
 ---
-title: Arthur Chardon's portfolio
+title: Arthur Chardon - Developer and web engineer
 layout: "base.njk"
 cssFile: "home.css"
 ---
 
 <section class="centered-content">
   <div class="gigantic-title--container">
-    <h1 class="gigantic-title--title">
+    <h1 id="me" class="gigantic-title--title">
       <span class="gigantic-title--title--first-name"> Arthur </span>
       <span class="gigantic-title--title--last-name"> Chardon </span>
     </h1>
@@ -36,9 +36,9 @@ cssFile: "home.css"
       </div>
       <div class="code-box--body">
         <p class="code--text code--text--typing" style="--n: 261">
-          I am a <b>computer science engineer</b>, working mainly on web projects.
-          I enjoy creating <b>user friendly</b> interfaces that relies on
-          <b>simple</b> yet <b>solid basis</b>.
+          I am a <b>computer science engineer</b>, working mainly on web
+          projects. I enjoy creating <b>user friendly</b> interfaces that relies
+          on <b>simple</b> yet <b>solid basis</b>.
         </p>
       </div>
     </div>
@@ -65,10 +65,38 @@ cssFile: "home.css"
         <li><img src="assets/svg/prettier.svg" aria-label="Prettier" /></li>
       </ul>
     </div>
-  </div>  
+  </div>
 </section>
 
-<section style="display: none;" class="third-content">
+<section class="lab-section">
+  <h2 id="lab" class="lab-title"><span>The</span><span>Lab</span></h2>
+  <div class="lab-projects">
+    <div class="project">
+      <a class="project--intro" href="https://wordle-clone-two-sand.vercel.app/">
+        <h3>Wordy</h3>
+        <img src="/assets/svg/letter-w.svg" aria-label="W Icon">
+      </a>
+
+      <div>Stack: React, Express</div>
+    </div>
+    <div class="project">
+      <a class="project--intro" href="https://ecobalyse-food.vercel.app/">
+        <h3>Ecobalyse Calculator</h3>
+        <img src="/assets/svg/ecofood-logo.svg" aria-label="Ecofood Logo">
+      </a>
+      <div>Stack: React</div>
+    </div>
+    <div class="project">
+      <a class="project--intro" href="https://react-chess-peach.vercel.app">
+        <h3>Chess</h3>
+        <img src="/assets/svg/wP.svg" aria-label="White chess pawn">
+      </a>
+      <div>Stack: React</div>
+    </div>
+  </div>
+</section>
+
+<section style="display: none" class="third-content">
   <div class="code-box opening-down">
     <div class="code-box--header">
       <div alt="VSCode Alternative Icon" class="code-box--icon"></div>
@@ -76,7 +104,7 @@ cssFile: "home.css"
     </div>
     <div class="code-box--body">
       <ul class="code--text code--text--standard">
-       this is just a test
+        this is just a test
       </ul>
     </div>
   </div>

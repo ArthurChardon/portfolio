@@ -7,3 +7,5 @@ indication on every element that can be hovered
 
 light/dark theme
 https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+
+https://developers.google.com/speed/docs/insights/MinifyResources?hl=fr
